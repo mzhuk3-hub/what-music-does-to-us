@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a15">
+  <title>What Music Does to Us — Interactive Art</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.11/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.11/addons/p5.sound.min.js"></script>
+</head>
+<body>
+  <main class="experience">
+    <header class="heading">
+      <span class="eyebrow">AN INTERACTIVE SOUND EXPERIENCE</span>
+      <h1>WHAT MUSIC DOES TO US</h1>
+      <p>One body. Different sounds. Different reactions.</p>
+    </header>
+    <div id="canvas-container" aria-label="Animated particle silhouette responding to music"></div>
+    <div class="listening" id="listening">SILENCE</div>
+    <section class="controls" aria-label="Music controls">
+      <div class="control-group upload-group">
+        <label for="audio-upload">YOUR MUSIC</label>
+        <input id="audio-upload" type="file" accept="audio/*,.mp3,.wav,.ogg" multiple>
+      </div>
+      <div class="control-group song-group">
+        <label for="song-select">TRACK</label>
+        <select id="song-select"><option value="-1">Choose a song</option></select>
+      </div>
+      <div class="control-group emotion-group">
+        <label for="emotion-select">EMOTION</label>
+        <select id="emotion-select">
+          <option value="AUTO">Automatic</option>
+          <option value="SADNESS">Sadness</option>
+          <option value="ANGER">Anger</option>
+          <option value="LOVE">Love</option>
+          <option value="CALM">Calm</option>
+          <option value="JOY">Joy</option>
+          <option value="DREAMY">Dreamy</option>
+        </select>
+      </div>
+      <button id="play-button" type="button">▶ Play</button>
+    </section>
+    <p id="status" class="status" role="status">Upload an MP3 to begin. Your audio stays in your browser.</p>
+    <footer>THE COLOURS ARE AN ARTISTIC INTERPRETATION OF SOUND, NOT A DIAGNOSIS OF EMOTION.</footer>
+  </main>
+  <script src="sketch.js"></script>
+</body>
+</html>
